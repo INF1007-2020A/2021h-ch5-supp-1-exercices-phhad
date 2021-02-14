@@ -31,7 +31,20 @@ def format_number(number, num_decimal_digits):
 	return ""
 
 def get_triangle(num_rows):
-	return ""
+    CHAR_BORD = "+"
+    resultat = ""
+    CHAR_TRIANGLE = "A"
+
+    chaineBord = CHAR_BORD * (num_rows * 2 + 1 )
+
+    resultat = resultat + chaineBord + "\n"
+    for i in range(num_rows):
+        chaine =  "+" + " " * (num_rows - i - 1)
+        chaine = chaine + CHAR_TRIANGLE * (2 * i + 1 )
+        chaine = chaine + " " * (num_rows - i - 1) + "+"
+        resultat = resultat + chaine + "\n"
+    resultat = resultat + chaineBord
+    return resultat
 
 
 if __name__ == "__main__":
