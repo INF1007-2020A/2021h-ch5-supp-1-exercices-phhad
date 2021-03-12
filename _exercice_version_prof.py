@@ -42,7 +42,7 @@ def format_number(number, num_decimal_digits):
 	decimal_part = abs(number) % 1.0
 	whole_part = int(abs(number))
 
-	# Formater la partie décimale
+	# Formater la partie décimale 676886.76 = 76 = 760
 	decimal_str = str(int(round(decimal_part * 10**num_decimal_digits)))
 	decimal_str = "." + "0" * (num_decimal_digits - len(decimal_str)) + decimal_str
 	# Approche plus automagique : decimal_str = f"{decimal_part :.{num_decimal_digits}f}"[1:]

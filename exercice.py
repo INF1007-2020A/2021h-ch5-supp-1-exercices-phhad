@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import random
+import math
 
 def get_bill(name, data):
     INDEX_NAME = 0
@@ -26,9 +27,17 @@ def get_bill(name, data):
     return name + "\n" + sous_total_print + "\n" + taxes_print + "\n"  + total_print
 
 def format_number(number, num_decimal_digits):
+    #1234.5678
+    number = round(number,3)
+    #3451234.568
+    numberStr = str(number)
+    resultat = ""
+    resultat = numberStr[3:7]
 
-	if num_decimal_digits > 3:
-	return ""
+    #'3 451 234.568'
+
+
+
 
 def get_triangle(num_rows):
     CHAR_BORD = "+"
